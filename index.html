@@ -354,6 +354,54 @@
   .dev-copy{ margin-top:26px; max-width:60ch; }
   .dev-copy p{ font-size:14.5px; color: var(--cream-dim); line-height:1.75; }
 
+  /* ORION EXPERIENCE */
+  .orion-intro{ max-width:64ch; margin-top:-30px; color:var(--cream-dim); font-size:16px; line-height:1.75; }
+  .orion-explorer{ margin-top:38px; border:1px solid var(--hairline-strong); background:var(--navy-2); }
+  .orion-explorer > summary{ list-style:none; cursor:pointer; position:relative; min-height:430px; overflow:hidden; display:flex; align-items:flex-end; }
+  .orion-explorer > summary::-webkit-details-marker{ display:none; }
+  .orion-cover{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .orion-cover-shade{ position:absolute; inset:0; background:linear-gradient(180deg, rgba(8,17,30,.08) 20%, rgba(8,17,30,.88) 100%); }
+  .orion-cover-copy{ position:relative; z-index:2; color:#fff; padding:38px; width:100%; display:flex; justify-content:space-between; align-items:flex-end; gap:24px; }
+  .orion-cover-copy small{ display:block; text-transform:uppercase; letter-spacing:.16em; font-size:10px; opacity:.78; margin-bottom:8px; }
+  .orion-cover-copy strong{ display:block; font-family:var(--font-display); font-size:clamp(27px,4vw,42px); font-weight:400; line-height:1.1; }
+  .orion-open{ flex-shrink:0; border:1px solid rgba(255,255,255,.55); padding:11px 18px; font-size:12px; letter-spacing:.04em; background:rgba(8,17,30,.18); backdrop-filter:blur(8px); }
+  .orion-explorer[open] .orion-open::after{ content:"Close"; }
+  .orion-explorer:not([open]) .orion-open::after{ content:"See more of Orion"; }
+  .orion-browser{ padding:34px; border-top:1px solid var(--hairline); }
+  .orion-tabs{ display:flex; gap:9px; flex-wrap:wrap; margin-bottom:30px; }
+  .orion-tab{ border:1px solid var(--hairline-strong); background:transparent; color:var(--cream-dim); padding:10px 15px; font:500 12px var(--font-body); cursor:pointer; transition:.2s ease; }
+  .orion-tab:hover,.orion-tab.active{ background:var(--cream); border-color:var(--cream); color:var(--navy); }
+  .orion-panel{ display:none; }
+  .orion-panel.active{ display:block; animation:orionFade .32s ease; }
+  @keyframes orionFade{ from{opacity:0; transform:translateY(7px);} to{opacity:1; transform:none;} }
+  .orion-panel-head{ display:flex; justify-content:space-between; gap:24px; align-items:end; margin-bottom:22px; }
+  .orion-panel-head h3{ font-family:var(--font-display); font-size:27px; font-weight:400; }
+  .orion-panel-head p{ color:var(--stone); font-size:13px; max-width:48ch; }
+  .orion-cards{ display:grid; grid-template-columns:1fr; gap:18px; }
+  @media(min-width:720px){ .orion-cards{ grid-template-columns:repeat(2,1fr); } }
+  @media(min-width:1020px){ .orion-cards.three{ grid-template-columns:repeat(3,1fr); } }
+  .orion-card{ background:var(--navy); border:1px solid var(--hairline); overflow:hidden; }
+  .orion-card > img{ width:100%; aspect-ratio:16/10; object-fit:cover; }
+  .orion-card-copy{ padding:18px 19px 19px; }
+  .orion-card-copy h4{ font-family:var(--font-display); font-size:19px; font-weight:400; line-height:1.2; }
+  .orion-card-copy p{ color:var(--stone); font-size:12.5px; margin-top:6px; line-height:1.55; }
+  .plan-toggle{ border-top:1px solid var(--hairline); }
+  .plan-toggle summary{ list-style:none; cursor:pointer; padding:13px 19px; color:var(--brass-dim); font-size:11.5px; display:flex; justify-content:space-between; text-transform:uppercase; letter-spacing:.07em; }
+  .plan-toggle summary::-webkit-details-marker{ display:none; }
+  .plan-toggle summary::after{ content:"+"; font-size:16px; line-height:1; }
+  .plan-toggle[open] summary::after{ content:"−"; }
+  .plan-toggle img{ width:100%; background:#fff; border-top:1px solid var(--hairline); }
+  .orion-plans .orion-card > img{ object-fit:contain; background:#fff; aspect-ratio:16/10; }
+  .orion-disclaimer{ margin-top:22px; color:var(--stone); font-size:11px; font-style:italic; }
+  @media(max-width:620px){
+    .orion-explorer > summary{ min-height:360px; }
+    .orion-cover-copy{ padding:24px; display:block; }
+    .orion-open{ display:inline-block; margin-top:18px; }
+    .orion-browser{ padding:22px 16px; }
+    .orion-panel-head{ display:block; }
+    .orion-panel-head p{ margin-top:8px; }
+  }
+
   /* NAV underline */
   .navlinks a{ position:relative; padding-bottom:2px; }
   .navlinks a::after{
@@ -892,34 +940,104 @@
   <div class="wrap">
     <div class="section-head">
       <span class="folio">07</span>
-      <h2>Orion — the next site in view</h2>
+      <h2>Orion — coastal living, considered in full</h2>
     </div>
-    <p class="section-intro" style="margin-top:-30px; margin-bottom:0;">A second Gold Coast site under early consideration, held for once this project reaches land acquisition.</p>
-    <div class="dev-note" style="margin-top:34px;"><i>i</i> Placeholder frames — replace with renders or site photography as they become available.</div>
-    <div class="dev-grid">
-      <div class="dev-frame lead">
-        <div class="dev-placeholder">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="4" width="18" height="16" rx="1"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 15l-5-5L5 20"/></svg>
-          <span>Orion — hero image</span>
+    <p class="orion-intro">Explore Orion by experience rather than opening every image at once. Choose hotel rooms, private residences, the Crown Penthouse, arrival spaces, or amenities — with polished brochure plans available only where they clarify the space.</p>
+
+    <details class="orion-explorer">
+      <summary aria-label="Open the Orion experience">
+        <img class="orion-cover" src="assets/orion/amenity-olympus-crown.webp" alt="Orion's Olympus rooftop crown overlooking the Gold Coast" loading="lazy">
+        <span class="orion-cover-shade"></span>
+        <span class="orion-cover-copy">
+          <span><small>Gold Coast · 21 levels</small><strong>Step inside Orion</strong></span>
+          <span class="orion-open" aria-hidden="true"></span>
+        </span>
+      </summary>
+
+      <div class="orion-browser">
+        <div class="orion-tabs" role="tablist" aria-label="Explore Orion by area">
+          <button class="orion-tab active" type="button" role="tab" aria-selected="true" data-orion-tab="arrival">Arrival</button>
+          <button class="orion-tab" type="button" role="tab" aria-selected="false" data-orion-tab="hotel">Hotel rooms</button>
+          <button class="orion-tab" type="button" role="tab" aria-selected="false" data-orion-tab="residences">Residences</button>
+          <button class="orion-tab" type="button" role="tab" aria-selected="false" data-orion-tab="penthouse">Crown Penthouse</button>
+          <button class="orion-tab" type="button" role="tab" aria-selected="false" data-orion-tab="amenities">Amenities</button>
+          <button class="orion-tab" type="button" role="tab" aria-selected="false" data-orion-tab="plans">Brochure plans</button>
         </div>
-        <div class="dev-tag">Orion</div>
-      </div>
-      <div class="dev-frame">
-        <div class="dev-placeholder">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="4" width="18" height="16" rx="1"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 15l-5-5L5 20"/></svg>
-          <span>Site or concept image</span>
+
+        <div class="orion-panel active" data-orion-panel="arrival" role="tabpanel">
+          <div class="orion-panel-head"><h3>Arrival</h3><p>A calm ocean-facing threshold, with reception and vertical circulation presented as one coherent guest journey.</p></div>
+          <div class="orion-cards">
+            <article class="orion-card"><img src="assets/orion/arrival-lobby.webp" alt="Orion ocean-axis lobby" loading="lazy"><div class="orion-card-copy"><h4>Ocean-axis lobby</h4><p>A direct visual connection from arrival to the coast.</p></div><details class="plan-toggle"><summary>View brochure floor plan</summary><img src="assets/orion/plan-ground.webp" alt="Orion ground-floor brochure plan" loading="lazy"></details></article>
+            <article class="orion-card"><img src="assets/orion/arrival-reception.webp" alt="Orion reception and lift lobby" loading="lazy"><div class="orion-card-copy"><h4>Reception &amp; lifts</h4><p>A restrained, hotel-grade transition into the building.</p></div></article>
+          </div>
         </div>
-      </div>
-      <div class="dev-frame">
-        <div class="dev-placeholder">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="4" width="18" height="16" rx="1"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 15l-5-5L5 20"/></svg>
-          <span>Site or concept image</span>
+
+        <div class="orion-panel" data-orion-panel="hotel" role="tabpanel" hidden>
+          <div class="orion-panel-head"><h3>Hotel rooms</h3><p>Four guest tiers, from the standard room through to Orion's signature suite. Open each brochure plan individually.</p></div>
+          <div class="orion-cards">
+            <article class="orion-card"><img src="assets/orion/hotel-standard.webp" alt="Orion standard hotel room" loading="lazy"><div class="orion-card-copy"><h4>Standard Room</h4><p>Efficient luxury with a composed coastal material palette.</p></div><details class="plan-toggle"><summary>View room plan</summary><img src="assets/orion/plan-hotel-standard.webp" alt="Standard hotel room brochure plan" loading="lazy"></details></article>
+            <article class="orion-card"><img src="assets/orion/hotel-premium-ocean.webp" alt="Orion premium ocean hotel room" loading="lazy"><div class="orion-card-copy"><h4>Premium Ocean Room</h4><p>Expanded glazing and a stronger relationship to the horizon.</p></div><details class="plan-toggle"><summary>View room plan</summary><img src="assets/orion/plan-hotel-premium-ocean.webp" alt="Premium ocean hotel room brochure plan" loading="lazy"></details></article>
+            <article class="orion-card"><img src="assets/orion/hotel-corner-suite.webp" alt="Orion corner hotel suite" loading="lazy"><div class="orion-card-copy"><h4>Corner Suite</h4><p>Dual-aspect outlooks with a distinct living zone.</p></div><details class="plan-toggle"><summary>View room plan</summary><img src="assets/orion/plan-hotel-corner-suite.webp" alt="Corner hotel suite brochure plan" loading="lazy"></details></article>
+            <article class="orion-card"><img src="assets/orion/hotel-signature-suite.webp" alt="Orion signature hotel suite" loading="lazy"><div class="orion-card-copy"><h4>Signature Suite</h4><p>The most complete hotel experience below the residences.</p></div><details class="plan-toggle"><summary>View room plan</summary><img src="assets/orion/plan-hotel-signature-suite.webp" alt="Signature hotel suite brochure plan" loading="lazy"></details></article>
+          </div>
         </div>
+
+        <div class="orion-panel" data-orion-panel="residences" role="tabpanel" hidden>
+          <div class="orion-panel-head"><h3>Private residences</h3><p>Five ownership formats, allowing buyers to select by scale, outlook and level rather than viewing a single generic apartment.</p></div>
+          <div class="orion-cards three">
+            <article class="orion-card"><img src="assets/orion/residence-1br.webp" alt="Orion one-bedroom residence" loading="lazy"><div class="orion-card-copy"><h4>One Bedroom</h4><p>A refined entry point to private ownership at Orion.</p></div><details class="plan-toggle"><summary>View residence plan</summary><img src="assets/orion/plan-residence-1br.webp" alt="One-bedroom residence brochure plan" loading="lazy"></details></article>
+            <article class="orion-card"><img src="assets/orion/residence-2br.webp" alt="Orion two-bedroom residence" loading="lazy"><div class="orion-card-copy"><h4>Two Bedroom</h4><p>Balanced living and guest accommodation for longer stays.</p></div><details class="plan-toggle"><summary>View residence plan</summary><img src="assets/orion/plan-residence-2br.webp" alt="Two-bedroom residence brochure plan" loading="lazy"></details></article>
+            <article class="orion-card"><img src="assets/orion/residence-3br.webp" alt="Orion three-bedroom residence" loading="lazy"><div class="orion-card-copy"><h4>Three Bedroom</h4><p>Family-scale coastal living with generous shared space.</p></div><details class="plan-toggle"><summary>View residence plan</summary><img src="assets/orion/plan-residence-3br.webp" alt="Three-bedroom residence brochure plan" loading="lazy"></details></article>
+            <article class="orion-card"><img src="assets/orion/residence-premium.webp" alt="Orion premium residence" loading="lazy"><div class="orion-card-copy"><h4>Premium Residence</h4><p>Higher-level living with elevated finishes and outlook.</p></div><details class="plan-toggle"><summary>View residence plan</summary><img src="assets/orion/plan-residence-premium.webp" alt="Premium residence brochure plan" loading="lazy"></details></article>
+            <article class="orion-card"><img src="assets/orion/residence-sky.webp" alt="Orion sky residence" loading="lazy"><div class="orion-card-copy"><h4>Sky Residence</h4><p>A limited collection immediately below the crown.</p></div><details class="plan-toggle"><summary>View residence plan</summary><img src="assets/orion/plan-residence-sky.webp" alt="Sky residence brochure plan" loading="lazy"></details></article>
+          </div>
+        </div>
+
+        <div class="orion-panel" data-orion-panel="penthouse" role="tabpanel" hidden>
+          <div class="orion-panel-head"><h3>The Crown Penthouse</h3><p>Orion's most private residential level, shown room by room rather than reduced to a single hero render.</p></div>
+          <div class="orion-cards">
+            <article class="orion-card"><img src="assets/orion/penthouse-great-room.webp" alt="Orion Crown Penthouse great room" loading="lazy"><div class="orion-card-copy"><h4>The Great Room</h4><p>Panoramic entertaining at the crown of the building.</p></div></article>
+            <article class="orion-card"><img src="assets/orion/penthouse-kitchen.webp" alt="Orion Crown Penthouse kitchen and dining room" loading="lazy"><div class="orion-card-copy"><h4>Kitchen &amp; Dining</h4><p>A hospitality-scale heart for private residence life.</p></div></article>
+            <article class="orion-card"><img src="assets/orion/penthouse-master.webp" alt="Orion Crown Penthouse master bedroom" loading="lazy"><div class="orion-card-copy"><h4>Master Wing</h4><p>A secluded sleeping suite with uninterrupted outlooks.</p></div></article>
+            <article class="orion-card"><img src="assets/orion/penthouse-ensuite.webp" alt="Orion Crown Penthouse master ensuite" loading="lazy"><div class="orion-card-copy"><h4>Master Ensuite</h4><p>Stone, water and light composed as a private retreat.</p></div><details class="plan-toggle"><summary>View penthouse plan</summary><img src="assets/orion/plan-penthouse.webp" alt="Crown Penthouse website floor plan" loading="lazy"></details></article>
+          </div>
+        </div>
+
+        <div class="orion-panel" data-orion-panel="amenities" role="tabpanel" hidden>
+          <div class="orion-panel-head"><h3>Amenities</h3><p>Wellness, dining and rooftop hospitality are arranged as distinct destinations within Orion.</p></div>
+          <div class="orion-cards three">
+            <article class="orion-card"><img src="assets/orion/amenity-gym.webp" alt="Orion private gym" loading="lazy"><div class="orion-card-copy"><h4>Private Gym</h4><p>Strength and functional training with a luxury club atmosphere.</p></div></article>
+            <article class="orion-card"><img src="assets/orion/amenity-cardio.webp" alt="Orion ocean-view cardio studio" loading="lazy"><div class="orion-card-copy"><h4>Ocean Cardio</h4><p>Cardio training orientated toward the Gold Coast outlook.</p></div></article>
+            <article class="orion-card"><img src="assets/orion/amenity-pilates.webp" alt="Orion Pilates studio" loading="lazy"><div class="orion-card-copy"><h4>Pilates Studio</h4><p>A purpose-built reformer space with calm, controlled lighting.</p></div></article>
+            <article class="orion-card"><img src="assets/orion/amenity-pilates-ocean.webp" alt="Orion reciprocal Pilates studio view" loading="lazy"><div class="orion-card-copy"><h4>Wellness Outlook</h4><p>The reciprocal studio view connects movement to the coast.</p></div></article>
+            <article class="orion-card"><img src="assets/orion/amenity-restaurant.webp" alt="Orion signature restaurant" loading="lazy"><div class="orion-card-copy"><h4>Signature Restaurant</h4><p>Destination dining within the building.</p></div><details class="plan-toggle"><summary>View dining brochure plan</summary><img src="assets/orion/plan-dining.webp" alt="Orion dining floor brochure plan" loading="lazy"></details></article>
+            <article class="orion-card"><img src="assets/orion/amenity-bar.webp" alt="Orion signature bar" loading="lazy"><div class="orion-card-copy"><h4>Signature Bar</h4><p>An intimate evening venue with a darker material expression.</p></div></article>
+            <article class="orion-card"><img src="assets/orion/amenity-olympus.webp" alt="Orion Olympus rooftop hospitality venue" loading="lazy"><div class="orion-card-copy"><h4>Olympus</h4><p>Public rooftop hospitality above the residential crown.</p></div></article>
+            <article class="orion-card"><img src="assets/orion/amenity-olympus-crown.webp" alt="Exterior of Orion's Olympus rooftop crown" loading="lazy"><div class="orion-card-copy"><h4>The Crown Exterior</h4><p>Orion's illuminated rooftop identity on the skyline.</p></div></article>
+          </div>
+        </div>
+
+        <div class="orion-panel orion-plans" data-orion-panel="plans" role="tabpanel" hidden>
+          <div class="orion-panel-head"><h3>Brochure plans</h3><p>Only presentation-ready plans are shown here. Detailed coordination and governing drawings remain outside the public website.</p></div>
+          <div class="orion-cards three">
+            <article class="orion-card"><img src="assets/orion/plan-ground.webp" alt="Ground arrival brochure plan" loading="lazy"><div class="orion-card-copy"><h4>Ground Arrival</h4></div></article>
+            <article class="orion-card"><img src="assets/orion/plan-dining.webp" alt="Dining and social brochure plan" loading="lazy"><div class="orion-card-copy"><h4>Dining &amp; Social</h4></div></article>
+            <article class="orion-card"><img src="assets/orion/plan-hotel-standard.webp" alt="Standard hotel room plan" loading="lazy"><div class="orion-card-copy"><h4>Standard Room</h4></div></article>
+            <article class="orion-card"><img src="assets/orion/plan-hotel-premium-ocean.webp" alt="Premium ocean hotel room plan" loading="lazy"><div class="orion-card-copy"><h4>Premium Ocean Room</h4></div></article>
+            <article class="orion-card"><img src="assets/orion/plan-hotel-corner-suite.webp" alt="Corner hotel suite plan" loading="lazy"><div class="orion-card-copy"><h4>Corner Suite</h4></div></article>
+            <article class="orion-card"><img src="assets/orion/plan-hotel-signature-suite.webp" alt="Signature hotel suite plan" loading="lazy"><div class="orion-card-copy"><h4>Signature Suite</h4></div></article>
+            <article class="orion-card"><img src="assets/orion/plan-residence-1br.webp" alt="One-bedroom residence plan" loading="lazy"><div class="orion-card-copy"><h4>One Bedroom</h4></div></article>
+            <article class="orion-card"><img src="assets/orion/plan-residence-2br.webp" alt="Two-bedroom residence plan" loading="lazy"><div class="orion-card-copy"><h4>Two Bedroom</h4></div></article>
+            <article class="orion-card"><img src="assets/orion/plan-residence-3br.webp" alt="Three-bedroom residence plan" loading="lazy"><div class="orion-card-copy"><h4>Three Bedroom</h4></div></article>
+            <article class="orion-card"><img src="assets/orion/plan-residence-premium.webp" alt="Premium residence plan" loading="lazy"><div class="orion-card-copy"><h4>Premium Residence</h4></div></article>
+            <article class="orion-card"><img src="assets/orion/plan-residence-sky.webp" alt="Sky residence plan" loading="lazy"><div class="orion-card-copy"><h4>Sky Residence</h4></div></article>
+            <article class="orion-card"><img src="assets/orion/plan-penthouse.webp" alt="Crown Penthouse plan" loading="lazy"><div class="orion-card-copy"><h4>Crown Penthouse</h4></div></article>
+          </div>
+        </div>
+
+        <p class="orion-disclaimer">Concept imagery and brochure plans are for presentation only and do not constitute construction documentation.</p>
       </div>
-    </div>
-    <div class="dev-copy">
-      <p>Details on Orion are held back until this project's capital and approval stages are further along. It's shown here as evidence of a pipeline beyond a single project, not as a second active raise.</p>
-    </div>
+    </details>
   </div>
 </section>
 
@@ -1010,7 +1128,7 @@
 
 <script>
 (function(){
-  var targets = document.querySelectorAll('.section-head, .plan-rows, .stack-wrap, .process-rows, .market-grid, .cap-flow, .cap-figures, .faq-list, .founder-layout, .loc-layout, .dev-grid, .dev-copy');
+  var targets = document.querySelectorAll('.section-head, .plan-rows, .stack-wrap, .process-rows, .market-grid, .cap-flow, .cap-figures, .faq-list, .founder-layout, .loc-layout, .orion-explorer');
   targets.forEach(function(el){ el.classList.add('reveal'); });
   var io = new IntersectionObserver(function(entries){
     entries.forEach(function(entry){
@@ -1094,6 +1212,25 @@
     });
   }, { rootMargin: '-45% 0px -50% 0px' });
   navSections.forEach(function(s){ navio.observe(s); });
+
+  // Orion explorer: reveal one guest-facing category at a time.
+  var orionTabs = document.querySelectorAll('[data-orion-tab]');
+  var orionPanels = document.querySelectorAll('[data-orion-panel]');
+  orionTabs.forEach(function(tabButton){
+    tabButton.addEventListener('click', function(){
+      var selected = tabButton.getAttribute('data-orion-tab');
+      orionTabs.forEach(function(button){
+        var active = button === tabButton;
+        button.classList.toggle('active', active);
+        button.setAttribute('aria-selected', active ? 'true' : 'false');
+      });
+      orionPanels.forEach(function(panel){
+        var active = panel.getAttribute('data-orion-panel') === selected;
+        panel.classList.toggle('active', active);
+        panel.hidden = !active;
+      });
+    });
+  });
 })();
 </script>
 </body>
