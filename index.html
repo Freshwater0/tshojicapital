@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tshoji Capital — The Halcyon</title>
+<title>Orion by Tshoji Capital — Gold Coast Residences</title>
+<meta name="description" content="Discover Orion, a proposed 21-level collection of private residences, luxury hotel rooms, wellness and dining on the Gold Coast.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -356,6 +357,12 @@
 
   /* ORION EXPERIENCE */
   .orion-intro{ max-width:64ch; margin-top:-30px; color:var(--cream-dim); font-size:16px; line-height:1.75; }
+  .orion-film{ margin-top:38px; }
+  .orion-film-frame{ position:relative; overflow:hidden; border:1px solid var(--hairline-strong); background:#050b12; box-shadow:0 24px 54px rgba(7,17,29,.2); }
+  .orion-film video{ display:block; width:100%; aspect-ratio:16/9; object-fit:cover; background:#050b12; }
+  .orion-film-meta{ display:flex; align-items:flex-start; justify-content:space-between; gap:24px; padding:18px 0 0; }
+  .orion-film-meta strong{ font-family:var(--font-display); font-size:20px; font-weight:400; }
+  .orion-film-meta span{ color:var(--stone); font-size:12px; text-transform:uppercase; letter-spacing:.1em; white-space:nowrap; padding-top:4px; }
   .orion-explorer{ margin-top:38px; border:1px solid var(--hairline-strong); background:var(--navy-2); }
   .orion-explorer > summary{ list-style:none; cursor:pointer; position:relative; min-height:430px; overflow:hidden; display:flex; align-items:flex-end; }
   .orion-explorer > summary::-webkit-details-marker{ display:none; }
@@ -394,6 +401,8 @@
   .orion-plans .orion-card > img{ object-fit:contain; background:#fff; aspect-ratio:16/10; }
   .orion-disclaimer{ margin-top:22px; color:var(--stone); font-size:11px; font-style:italic; }
   @media(max-width:620px){
+    .orion-film-meta{ display:block; }
+    .orion-film-meta span{ display:block; margin-top:5px; }
     .orion-explorer > summary{ min-height:360px; }
     .orion-cover-copy{ padding:24px; display:block; }
     .orion-open{ display:inline-block; margin-top:18px; }
@@ -447,15 +456,14 @@
   <div class="inner">
     <div class="word"><svg class="vane" viewBox="0 0 24 24" fill="none"><path d="M12 2L12 22M12 2L8 6M12 2L16 6" stroke="#8a6d40" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="14" r="3.4" stroke="#8a6d40" stroke-width="1.2"/></svg>TSHOJI <span>CAPITAL</span></div>
     <ul class="navlinks">
-      <li><a href="#plan">The plan</a></li>
-      <li><a href="#process">Process</a></li>
-      <li><a href="#location">The site</a></li>
-      <li><a href="#capital">Capital</a></li>
-      <li><a href="#founder">Founder</a></li>
-      <li><a href="#developments">Pipeline</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#developments">Orion</a></li>
+      <li><a href="#plan">Residences</a></li>
+      <li><a href="#process">Lifestyle</a></li>
+      <li><a href="#location">Location</a></li>
+      <li><a href="#founder">About</a></li>
+      <li><a href="#capital">Investment enquiries</a></li>
     </ul>
-    <a href="#contact" class="menu-btn">Request brief</a>
+    <a href="#contact" class="menu-btn">Register interest</a>
   </div>
 </nav>
 
@@ -737,31 +745,31 @@
 
   <div class="wrap hero-inner">
     <div class="folio">Gold Coast, Queensland</div>
-    <div class="hero-dateline">Tshoji Capital — Investment overview</div>
-    <h1 class="headline">A boutique mixed-use development built to keep earning after it's sold</h1>
-    <p class="lede">Sixty residences fund the build. A hotel and a members' wellness floor keep it earning after. Positioned along the Burleigh to Mermaid Beach corridor, with designs complete and capital now being secured. <b>This is a first project, built by one person, and this page says so plainly.</b></p>
+    <div class="hero-dateline">Orion by Tshoji Capital</div>
+    <h1 class="headline">A new expression of coastal living</h1>
+    <p class="lede">Orion is a proposed 21-level residential and hotel destination bringing together approximately 80 private residences, 60 luxury hotel rooms and a curated collection of wellness, dining and leisure experiences on the Gold Coast. <b>Designed for life connected to the ocean.</b></p>
     <div class="hero-actions">
-      <a href="#contact" class="btn btn-primary"><span>Request the investment brief</span></a>
-      <a href="#plan" class="btn btn-ghost">See the plan</a>
+      <a href="#developments" class="btn btn-primary"><span>Explore Orion</span></a>
+      <a href="#contact" class="btn btn-ghost">Register interest</a>
     </div>
   </div>
 </header>
 
 <section class="pipeline">
   <div class="wrap pipeline-inner">
-    <div class="pipeline-item"><div class="pnum">$50–60m</div><div class="plabel">Estimated build cost</div></div>
-    <div class="pipeline-item"><div class="pnum" data-count-to="60">60</div><div class="plabel">Residences, plus hotel &amp; wellness floor</div></div>
-    <div class="pipeline-item"><div class="pnum">$1.5–15m</div><div class="plabel">Unit price range</div></div>
-    <div class="pipeline-item"><div class="pnum">01</div><div class="plabel">First ground-up development</div></div>
+    <div class="pipeline-item"><div class="pnum" data-count-to="21">21</div><div class="plabel">Proposed levels</div></div>
+    <div class="pipeline-item"><div class="pnum" data-count-to="80">80</div><div class="plabel">Approximate private residences</div></div>
+    <div class="pipeline-item"><div class="pnum" data-count-to="60">60</div><div class="plabel">Proposed luxury hotel rooms</div></div>
+    <div class="pipeline-item"><div class="pnum">From $1.6m</div><div class="plabel">Indicative residence pricing</div></div>
   </div>
 </section>
 
 <section class="stage">
   <div class="wrap stage-inner">
-    <div class="stage-item"><span class="dot done"></span><div class="txt"><div class="label">Designs &amp; floor plans</div><div class="val">Complete</div></div></div>
-    <div class="stage-item"><span class="dot pending"></span><div class="txt"><div class="label">Land</div><div class="val">Identified, not acquired</div></div></div>
-    <div class="stage-item"><span class="dot pending"></span><div class="txt"><div class="label">Approval</div><div class="val">Not yet lodged</div></div></div>
-    <div class="stage-item"><span class="dot done"></span><div class="txt"><div class="label">Capital raise</div><div class="val">Open now</div></div></div>
+    <div class="stage-item"><span class="dot done"></span><div class="txt"><div class="label">Project</div><div class="val">Orion concept</div></div></div>
+    <div class="stage-item"><span class="dot pending"></span><div class="txt"><div class="label">Location</div><div class="val">Gold Coast site under assessment</div></div></div>
+    <div class="stage-item"><span class="dot pending"></span><div class="txt"><div class="label">Status</div><div class="val">Subject to site &amp; approvals</div></div></div>
+    <div class="stage-item"><span class="dot done"></span><div class="txt"><div class="label">Enquiries</div><div class="val">Registrations now open</div></div></div>
   </div>
 </section>
 
@@ -769,44 +777,44 @@
   <div class="wrap">
     <div class="section-head">
       <span class="folio">01</span>
-      <h2>One building, three sources of return</h2>
+      <h2>One address, a complete coastal lifestyle</h2>
     </div>
-    <p class="section-intro" style="margin-top:-30px; margin-bottom:40px;">Unit sales fund the build. The hotel and wellness floor are built to keep producing income long after the last unit settles.</p>
+    <p class="section-intro" style="margin-top:-30px; margin-bottom:40px;">Private homes, considered hospitality and destination wellness come together in one composed coastal address.</p>
     <div class="plan-rows">
       <div class="plan-row">
         <svg class="glyph" viewBox="0 0 44 44" fill="none"><rect x="10" y="6" width="24" height="34" stroke="#8a6d40" stroke-width="1"/><line x1="10" y1="16" x2="34" y2="16" stroke="#8a6d40" stroke-width="0.7"/><line x1="10" y1="26" x2="34" y2="26" stroke="#8a6d40" stroke-width="0.7"/><line x1="18" y1="6" x2="18" y2="40" stroke="#8a6d40" stroke-width="0.7"/><line x1="26" y1="6" x2="26" y2="40" stroke="#8a6d40" stroke-width="0.7"/></svg>
         <div>
           <h3>Residences</h3>
-          <p>Sold to owner-occupiers and investors across a range of tiers, up to the top-floor penthouses. This is what funds construction.</p>
+          <p>A limited collection ranging from refined one-bedroom homes to expansive sky residences and the Crown Penthouse.</p>
         </div>
-        <div class="figure">60 units<b>$1.5m – $15m</b></div>
+        <div class="figure">Approx. 80 homes<b>From $1.6m</b></div>
       </div>
       <div class="plan-row">
         <svg class="glyph" viewBox="0 0 44 44" fill="none"><path d="M8 40V18L22 6L36 18V40" stroke="#8a6d40" stroke-width="1" stroke-linejoin="round"/><line x1="18" y1="40" x2="18" y2="28" stroke="#8a6d40" stroke-width="0.7"/><line x1="26" y1="40" x2="26" y2="28" stroke="#8a6d40" stroke-width="0.7"/></svg>
         <div>
           <h3>Hotel</h3>
-          <p>The remaining floors operate as hotel premises, giving the building a second, ongoing revenue line once it's built and open.</p>
+          <p>Approximately 60 rooms and suites bring hotel-level service, thoughtful arrival spaces and a sense of occasion to Orion.</p>
         </div>
-        <div class="figure">Remaining floors<b>Post-completion</b></div>
+        <div class="figure">Approx. 60 rooms<b>Four room tiers</b></div>
       </div>
       <div class="plan-row">
         <svg class="glyph" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="16" r="7" stroke="#8a6d40" stroke-width="1"/><path d="M10 38c1-8 6-13 12-13s11 5 12 13" stroke="#8a6d40" stroke-width="1"/></svg>
         <div>
-          <h3>Wellness floor</h3>
-          <p>A full floor given to a gym and Pilates studio, open to the public on weekly memberships — income independent of hotel occupancy or unit sales.</p>
+          <h3>Wellness &amp; dining</h3>
+          <p>Ocean-facing training, Pilates, restorative spaces, destination dining and rooftop hospitality designed around everyday ritual.</p>
         </div>
-        <div class="figure">One floor<b>Weekly memberships</b></div>
+        <div class="figure">All-day living<b>Wellness to evening</b></div>
       </div>
     </div>
 
     <div class="stack-wrap">
-      <div class="stack-head">Indicative building program, ground to roof</div>
+      <div class="stack-head">Indicative 21-level experience, arrival to crown</div>
       <div class="stack">
-        <div class="stack-tier"><div><div class="t-name">Ground floor</div><div class="t-desc">Lobby, arrival, retail frontage</div></div><div class="t-floors">L00</div></div>
-        <div class="stack-tier emph"><div><div class="t-name">Wellness floor</div><div class="t-desc">Gym and Pilates studio, public weekly memberships</div></div><div class="t-floors">L01</div></div>
-        <div class="stack-tier"><div><div class="t-name">Hotel</div><div class="t-desc">Hotel premises across the mid-rise floors</div></div><div class="t-floors">L02–L14</div></div>
-        <div class="stack-tier"><div><div class="t-name">Residences</div><div class="t-desc">60 units, standard through premium tiers</div></div><div class="t-floors">L15–L28</div></div>
-        <div class="stack-tier"><div><div class="t-name">Penthouses</div><div class="t-desc">Top-floor residences, $15m tier</div></div><div class="t-floors">L29–L30</div></div>
+        <div class="stack-tier"><div><div class="t-name">Arrival</div><div class="t-desc">Lobby, reception and an immediate connection to the coast</div></div><div class="t-floors">GROUND</div></div>
+        <div class="stack-tier emph"><div><div class="t-name">Wellness &amp; social</div><div class="t-desc">Gym, Pilates, restorative spaces, dining and gathering</div></div><div class="t-floors">AMENITIES</div></div>
+        <div class="stack-tier"><div><div class="t-name">Orion Hotel</div><div class="t-desc">Approximately 60 rooms and suites with a coastal material palette</div></div><div class="t-floors">HOTEL</div></div>
+        <div class="stack-tier"><div><div class="t-name">Private residences</div><div class="t-desc">Approximately 80 homes across one, two, three and premium formats</div></div><div class="t-floors">RESIDENCES</div></div>
+        <div class="stack-tier"><div><div class="t-name">The Crown</div><div class="t-desc">Sky residences, the Crown Penthouse and Olympus rooftop hospitality</div></div><div class="t-floors">CROWN</div></div>
       </div>
     </div>
   </div>
@@ -816,25 +824,25 @@
   <div class="wrap">
     <div class="section-head">
       <span class="folio">02</span>
-      <h2>How this gets delivered</h2>
+      <h2>Designed around the rhythm of the day</h2>
     </div>
-    <p class="section-intro" style="margin-top:-30px; margin-bottom:44px;">No in-house team stands behind this yet — so each stage is run directly, with a named specialist engaged as the project reaches it.</p>
+    <p class="section-intro" style="margin-top:-30px; margin-bottom:44px;">Orion is conceived as more than an apartment building: each part of the day has its own place, mood and connection to the coast.</p>
     <div class="process-rows">
       <div class="process-item">
         <div class="pstep">1</div>
-        <div><h3>Site &amp; feasibility</h3><p>Candidate land assessed against zoning and overlays; a quantity surveyor engaged to lock real costs before any offer is made.</p></div>
+        <div><h3>Arrive</h3><p>Enter through a calm, hotel-inspired lobby where the journey through the building begins with light, texture and an ocean axis.</p></div>
       </div>
       <div class="process-item">
         <div class="pstep">2</div>
-        <div><h3>Design &amp; approval</h3><p>Architectural drawings and floor plans, already complete, go to council with a town planner managing the application through to decision.</p></div>
+        <div><h3>Live</h3><p>Private residences balance generous living, quiet retreats and expansive glazing, with choices shaped around scale and outlook.</p></div>
       </div>
       <div class="process-item">
         <div class="pstep">3</div>
-        <div><h3>Capital &amp; construction</h3><p>Investor equity and construction finance close; a builder is engaged and construction runs in staged drawdowns.</p></div>
+        <div><h3>Restore</h3><p>Move between strength training, Pilates, poolside restoration and a complete spa experience without leaving the building.</p></div>
       </div>
       <div class="process-item">
         <div class="pstep">4</div>
-        <div><h3>Sales &amp; operations</h3><p>Residences settle to owners; the hotel and wellness floor open and begin operating as the building's ongoing income.</p></div>
+        <div><h3>Gather</h3><p>Meet over dinner, settle into the signature bar or rise to Olympus for a rooftop experience above the coastline.</p></div>
       </div>
     </div>
   </div>
@@ -844,13 +852,13 @@
   <div class="wrap loc-layout">
     <div class="loc-text">
       <span class="folio">03</span>
-      <h2 style="margin-bottom:20px;">Away from the strip, still on the coast</h2>
-      <p>The target corridor sits between Burleigh Heads, Palm Beach, and Mermaid Beach — deliberately clear of the Gold Coast's busiest tourist stretch, while remaining minutes from the beach itself.</p>
-      <p>A specific parcel has not yet been contracted. Candidate sites are being assessed against zoning and overlay requirements before any offer is made, so the development approval pathway is understood before capital is committed.</p>
+      <h2 style="margin-bottom:20px;">Close to the energy, grounded by the coast</h2>
+      <p>Orion is being shaped for the coastal corridor spanning Burleigh Heads, Palm Beach and Mermaid Beach—close to the ocean, dining and everyday essentials while offering a calmer alternative to the busiest tourist precincts.</p>
+      <p>The final site is under assessment. Location details, views, access and the final development program will be confirmed before sales documentation is released.</p>
       <ul class="loc-list">
         <li><span>Target corridor</span><span>Burleigh – Mermaid Beach</span></li>
-        <li><span>Indicative land cost</span><span>$5m – $8m</span></li>
-        <li><span>Site status</span><span>Under assessment</span></li>
+        <li><span>Character</span><span>Coastal, connected, considered</span></li>
+        <li><span>Project status</span><span>Site under assessment</span></li>
       </ul>
     </div>
     <div class="map-box">
@@ -874,16 +882,16 @@
   <div class="wrap">
     <div class="section-head">
       <span class="folio">04</span>
-      <h2>The market this is built into</h2>
+      <h2>The Gold Coast, lived differently</h2>
     </div>
-    <p class="section-intro" style="margin-top:-30px; margin-bottom:44px;">Independent of this project, here's what's happening on the ground.</p>
+    <p class="section-intro" style="margin-top:-30px; margin-bottom:44px;">A residence shaped around the qualities that make coastal life feel effortless.</p>
     <div class="market-grid">
-      <div class="market-stat"><div class="m-num">+420/week</div><div class="m-txt">New residents arriving on the Gold Coast, with the region's population projected to reach one million by 2040.</div></div>
-      <div class="market-stat"><div class="m-num">Undersupplied</div><div class="m-txt">New dwelling approvals have run well below the region's annual housing requirement, with rental vacancy near record lows.</div></div>
-      <div class="market-stat"><div class="m-num">Median unit price up</div><div class="m-txt">Gold Coast unit prices have risen sharply over the past decade, recently overtaking Sydney's median for the first time.</div></div>
-      <div class="market-stat"><div class="m-num">$91bn</div><div class="m-txt">Committed regional infrastructure pipeline, alongside forecast job growth, underpinning the area's medium-term outlook.</div></div>
+      <div class="market-stat"><div class="m-num">The ocean</div><div class="m-txt">A daily relationship with the coastline, expressed through outlooks, arrival spaces and open, light-filled interiors.</div></div>
+      <div class="market-stat"><div class="m-num">Wellness</div><div class="m-txt">Training, movement and restoration designed into the building rather than treated as an afterthought.</div></div>
+      <div class="market-stat"><div class="m-num">Hospitality</div><div class="m-txt">Hotel-level arrival, destination dining and considered service add ease and energy to life at Orion.</div></div>
+      <div class="market-stat"><div class="m-num">Privacy</div><div class="m-txt">A limited residential collection with distinct home formats and quieter spaces above the public experience.</div></div>
     </div>
-    <p class="market-source">General market conditions as publicly reported in 2026; not specific to this project and not a forecast of its performance.</p>
+    <p class="market-source">The final location, amenity program and residence schedule remain subject to site acquisition, design development and statutory approvals.</p>
   </div>
 </section>
 
@@ -891,35 +899,35 @@
   <div class="wrap">
     <div class="section-head">
       <span class="folio">05</span>
-      <h2>How the project gets funded</h2>
+      <h2>Investment &amp; development partnerships</h2>
     </div>
-    <p class="section-intro" style="margin-top:-30px; margin-bottom:6px;">Investor equity and construction debt do different jobs. Here's how they connect, and what the raise is actually for.</p>
+    <p class="section-intro" style="margin-top:-30px; margin-bottom:6px;">Tshoji Capital welcomes confidential enquiries from experienced property, capital, hospitality and development partners. Detailed information is available following an introductory discussion and appropriate qualification.</p>
 
     <div class="cap-flow">
       <div class="cap-row">
         <div class="cap-index">01</div>
-        <div><h4>Investor equity</h4><p>Provides the deposit and buffer that makes the project bankable — this is the capital currently being raised.</p></div>
+        <div><h4>Make a confidential enquiry</h4><p>Share your organisation, area of interest and the role you may wish to play in the project.</p></div>
       </div>
       <div class="cap-row">
         <div class="cap-index">02</div>
-        <div><h4>Presales</h4><p>Unit presales, taken once designs and approval are further along, strengthen the case to construction lenders.</p></div>
+        <div><h4>Introductory discussion</h4><p>Suitable parties can discuss project stage, strategic fit and the information required for further review.</p></div>
       </div>
       <div class="cap-row">
         <div class="cap-index">03</div>
-        <div><h4>Construction finance</h4><p>Debt from a bank or private lender, drawn in stages against build progress — assessed once equity and presales are in place.</p></div>
+        <div><h4>Private project information</h4><p>Detailed development and financial material is provided privately when appropriate and subject to the required legal framework.</p></div>
       </div>
     </div>
 
     <div class="cap-figures-row">
       <div class="cap-figures">
-        <div class="cap-fig"><div class="flabel">Total build cost</div><div class="fval">$50–60m</div></div>
-        <div class="cap-fig"><div class="flabel">Land</div><div class="fval">$5–8m</div></div>
-        <div class="cap-fig"><div class="flabel">Unit range</div><div class="fval">$1.5–15m</div></div>
-        <div class="cap-fig"><div class="flabel">Residences</div><div class="fval">60</div></div>
+        <div class="cap-fig"><div class="flabel">Property partners</div><div class="fval">Welcome</div></div>
+        <div class="cap-fig"><div class="flabel">Capital partners</div><div class="fval">By enquiry</div></div>
+        <div class="cap-fig"><div class="flabel">Hospitality partners</div><div class="fval">Strategic</div></div>
+        <div class="cap-fig"><div class="flabel">Project information</div><div class="fval">Private</div></div>
       </div>
-      <div class="stamp" aria-hidden="true"><div class="stamp-text">Preliminary<small>Pending feasibility</small></div></div>
+      <div class="stamp" aria-hidden="true"><div class="stamp-text">Confidential<small>By request</small></div></div>
     </div>
-    <p class="fine">Figures are preliminary estimates and subject to a formal feasibility study. Nothing here constitutes financial advice or an offer to invest.</p>
+    <p class="fine"><a href="mailto:contact@tshojicapital.com?subject=Orion%20investment%20information%20request">Request investment information</a>. This website does not constitute financial advice, an offer or an invitation to invest.</p>
   </div>
 </section>
 
@@ -928,9 +936,9 @@
     <div><div class="founder-mark">K</div></div>
     <div class="founder-copy">
       <span class="folio">06</span>
-      <h2 style="margin-bottom:18px;">Built by one person, deliberately</h2>
-      <p>Tshoji Capital is founder-led rather than run by a large in-house team. The designs, floor plans, and site strategy for this project have been developed directly, with architects, planners, and legal counsel engaged as the project moves through each stage.</p>
-      <p>This is a first ground-up development. That's stated plainly rather than obscured — the project's credibility is intended to rest on the specifics of this plan, the numbers behind it, and the professionals engaged alongside it, not on a longer history that doesn't yet exist.</p>
+      <h2 style="margin-bottom:18px;">A founder-led vision for coastal living</h2>
+      <p>Tshoji Capital is developing Orion around a clear idea: a Gold Coast address where private residence, hospitality, wellness and social life feel intentionally connected.</p>
+      <p>The project is founder-led and is intended to be delivered with specialist expertise across architecture, planning, engineering, construction, finance and hospitality as it progresses through each stage.</p>
       <div class="role">Founder, Tshoji Capital Pty Ltd</div>
     </div>
   </div>
@@ -943,6 +951,19 @@
       <h2>Orion — coastal living, considered in full</h2>
     </div>
     <p class="orion-intro">Explore Orion by experience rather than opening every image at once. Choose hotel rooms, private residences, the Crown Penthouse, arrival spaces, or amenities — with polished brochure plans available only where they clarify the space.</p>
+
+    <div class="orion-film" aria-labelledby="orion-film-title">
+      <div class="orion-film-frame">
+        <video controls playsinline preload="metadata" poster="assets/video/orion-film-poster.webp" aria-label="Orion architectural film">
+          <source src="assets/video/orion-film.mp4" type="video/mp4">
+          Your browser does not support embedded video. <a href="assets/video/orion-film.mp4">Watch the Orion film</a>.
+        </video>
+      </div>
+      <div class="orion-film-meta">
+        <strong id="orion-film-title">Experience Orion in motion</strong>
+        <span>Architectural film · 1 min</span>
+      </div>
+    </div>
 
     <details class="orion-explorer">
       <summary aria-label="Open the Orion experience">
@@ -1007,9 +1028,11 @@
           <div class="orion-panel-head"><h3>Amenities</h3><p>Wellness, dining and rooftop hospitality are arranged as distinct destinations within Orion.</p></div>
           <div class="orion-cards three">
             <article class="orion-card"><img src="assets/orion/amenity-gym.webp" alt="Orion private gym" loading="lazy"><div class="orion-card-copy"><h4>Private Gym</h4><p>Strength and functional training with a luxury club atmosphere.</p></div></article>
-            <article class="orion-card"><img src="assets/orion/amenity-cardio.webp" alt="Orion ocean-view cardio studio" loading="lazy"><div class="orion-card-copy"><h4>Ocean Cardio</h4><p>Cardio training orientated toward the Gold Coast outlook.</p></div></article>
-            <article class="orion-card"><img src="assets/orion/amenity-pilates.webp" alt="Orion Pilates studio" loading="lazy"><div class="orion-card-copy"><h4>Pilates Studio</h4><p>A purpose-built reformer space with calm, controlled lighting.</p></div></article>
-            <article class="orion-card"><img src="assets/orion/amenity-pilates-ocean.webp" alt="Orion reciprocal Pilates studio view" loading="lazy"><div class="orion-card-copy"><h4>Wellness Outlook</h4><p>The reciprocal studio view connects movement to the coast.</p></div></article>
+            <article class="orion-card"><img src="assets/orion/amenity-pool-spa.webp" alt="Orion indoor pool and spa overlooking the Gold Coast" loading="lazy"><div class="orion-card-copy"><h4>Pool &amp; Spa</h4><p>An indoor swimming pool, hydrotherapy pools and sauna spaces overlooking the coast.</p></div></article>
+            <article class="orion-card"><img src="assets/orion/amenity-pilates-studio.webp" alt="Orion luxury reformer Pilates studio" loading="lazy"><div class="orion-card-copy"><h4>Pilates Studio</h4><p>A purpose-built reformer studio with 16 stations, integrated screens and warm architectural lighting.</p></div></article>
+            <article class="orion-card"><img src="assets/orion/amenity-pilates-ocean-new.webp" alt="Orion ocean-facing reformer Pilates studio" loading="lazy"><div class="orion-card-copy"><h4>Ocean-facing Pilates</h4><p>Movement framed by uninterrupted coastal views from the full-height glazing.</p></div></article>
+            <article class="orion-card"><img src="assets/orion/amenity-spa-treatment.webp" alt="Orion private spa treatment suite" loading="lazy"><div class="orion-card-copy"><h4>Treatment Suites</h4><p>Private treatment rooms designed for restorative rituals and couples experiences.</p></div></article>
+            <article class="orion-card"><img src="assets/orion/amenity-thermal-sanctuary.webp" alt="Orion thermal spa sanctuary with sauna, steam room and plunge pool" loading="lazy"><div class="orion-card-copy"><h4>Thermal Sanctuary</h4><p>Sauna, steam and plunge experiences composed as a quiet wellness retreat.</p></div></article>
             <article class="orion-card"><img src="assets/orion/amenity-restaurant.webp" alt="Orion signature restaurant" loading="lazy"><div class="orion-card-copy"><h4>Signature Restaurant</h4><p>Destination dining within the building.</p></div><details class="plan-toggle"><summary>View dining brochure plan</summary><img src="assets/orion/plan-dining.webp" alt="Orion dining floor brochure plan" loading="lazy"></details></article>
             <article class="orion-card"><img src="assets/orion/amenity-bar.webp" alt="Orion signature bar" loading="lazy"><div class="orion-card-copy"><h4>Signature Bar</h4><p>An intimate evening venue with a darker material expression.</p></div></article>
             <article class="orion-card"><img src="assets/orion/amenity-olympus.webp" alt="Orion Olympus rooftop hospitality venue" loading="lazy"><div class="orion-card-copy"><h4>Olympus</h4><p>Public rooftop hospitality above the residential crown.</p></div></article>
@@ -1045,24 +1068,24 @@
   <div class="wrap">
     <div class="section-head">
       <span class="folio">08</span>
-      <h2>Questions an investor would ask</h2>
+      <h2>Questions about Orion</h2>
     </div>
     <div class="faq-list" style="margin-top:-30px;">
       <details class="faq-item">
-        <summary>Why is this being raised before land is acquired?<span class="plus">+</span></summary>
-        <div class="faq-a">Investor equity is what makes land acquisition and the resulting development approval bankable in the first place — it's the deposit and buffer a lender and a vendor both need to see before either will commit.</div>
+        <summary>What is Orion?<span class="plus">+</span></summary>
+        <div class="faq-a">Orion is a proposed 21-level mixed residential and hotel destination on the Gold Coast, bringing together approximately 80 private residences, 60 hotel rooms and a collection of wellness, dining and leisure experiences.</div>
       </details>
       <details class="faq-item">
-        <summary>What happens to my capital if the site changes?<span class="plus">+</span></summary>
-        <div class="faq-a">Candidate sites are being assessed against zoning and overlays before any offer is made specifically so the target corridor and scheme are unlikely to change materially after capital is committed. Any change would be disclosed directly.</div>
+        <summary>What residence types are planned?<span class="plus">+</span></summary>
+        <div class="faq-a">The current concept includes one-, two- and three-bedroom residences, premium and sky residences, and a limited Crown Penthouse offering. The final mix, dimensions and pricing will be confirmed through design development.</div>
       </details>
       <details class="faq-item">
-        <summary>Who else is involved in delivering this?<span class="plus">+</span></summary>
-        <div class="faq-a">Tshoji Capital is founder-led. Architects, town planners, a quantity surveyor, and legal counsel are engaged as the project reaches each stage — see the process above for where each one comes in.</div>
+        <summary>When will residences be available to purchase?<span class="plus">+</span></summary>
+        <div class="faq-a">Sales timing will follow site confirmation, design development and the required approval pathway. Registering your interest places you on the list for verified project and release updates.</div>
       </details>
       <details class="faq-item">
-        <summary>How were the figures on this page produced?<span class="plus">+</span></summary>
-        <div class="faq-a">Current figures are preliminary estimates based on the completed designs and indicative land pricing. A formal feasibility study, commissioned early in the process above, will confirm or revise them.</div>
+        <summary>Are the images and floor plans final?<span class="plus">+</span></summary>
+        <div class="faq-a">No. The current imagery and brochure plans communicate the design intent only. Architecture, layouts, finishes, views, dimensions and amenities remain subject to the final site, consultant coordination and statutory approvals.</div>
       </details>
     </div>
   </div>
@@ -1072,23 +1095,24 @@
   <div class="wrap contact-inner">
     <div>
       <span class="folio">09</span>
-      <h2 style="margin-bottom:16px;">Request the investment brief</h2>
-      <p style="color:var(--cream-dim); font-size:15.5px; max-width:48ch; line-height:1.75;">The brief covers the full plan, indicative numbers, and current project status in detail. Serious enquiries only.</p>
+      <h2 style="margin-bottom:16px;">Register your interest in Orion</h2>
+      <p style="color:var(--cream-dim); font-size:15.5px; max-width:48ch; line-height:1.75;">Receive verified updates on the location, residence collection, pricing, private previews and future release information.</p>
       <div class="updates">
         <div class="u-copy">
-          <div class="u-title">Not ready to talk yet?</div>
-          <div class="u-sub">Get notified when land settles, the DA is lodged, and the raise updates.</div>
+          <div class="u-title">Prefer occasional updates?</div>
+          <div class="u-sub">Join the Orion list for major project and residence-release milestones.</div>
         </div>
         <div class="updates-form">
-          <input type="email" placeholder="you@email.com">
-          <button class="btn btn-ghost" style="padding:11px 20px; font-size:13px;">Notify me</button>
+          <input id="updates-email" type="email" placeholder="you@email.com" aria-label="Email for Orion updates">
+          <button id="updates-button" type="button" class="btn btn-ghost" style="padding:11px 20px; font-size:13px;">Join the list</button>
         </div>
       </div>
-      <form class="contact-form" onsubmit="return false;">
-        <div><label for="name">Name</label><input id="name" type="text" placeholder="Your name"></div>
-        <div><label for="email">Email</label><input id="email" type="email" placeholder="you@email.com"></div>
-        <div><label for="msg">Message</label><textarea id="msg" placeholder="A little about your interest in the project"></textarea></div>
-        <button type="submit" class="btn btn-primary" style="margin-top:6px; width:fit-content;"><span>Send enquiry</span></button>
+      <form id="orion-enquiry" class="contact-form">
+        <div><label for="name">Name</label><input id="name" name="name" type="text" placeholder="Your name" required></div>
+        <div><label for="email">Email</label><input id="email" name="email" type="email" placeholder="you@email.com" required></div>
+        <div><label for="interest">I am interested in</label><select id="interest" name="interest" style="width:100%; background:transparent; border:none; border-bottom:1px solid var(--hairline-strong); padding:11px 0; color:var(--cream); font:inherit;"><option>Private residence</option><option>Crown Penthouse</option><option>Hotel updates</option><option>Investment or development partnership</option><option>General enquiry</option></select></div>
+        <div><label for="msg">Message</label><textarea id="msg" name="message" placeholder="Tell us what you would like to know"></textarea></div>
+        <button type="submit" class="btn btn-primary" style="margin-top:6px; width:fit-content;"><span>Register interest</span></button>
       </form>
     </div>
     <div class="contact-side">
@@ -1110,18 +1134,18 @@
         <div class="word" style="font-size:15px;">TSHOJI <span>CAPITAL</span></div>
       </div>
       <ul class="footer-nav">
-        <li><a href="#plan">The plan</a></li>
-        <li><a href="#process">Process</a></li>
-        <li><a href="#location">The site</a></li>
-        <li><a href="#capital">Capital structure</a></li>
-        <li><a href="#founder">Founder</a></li>
-        <li><a href="#developments">Pipeline</a></li>
+        <li><a href="#developments">Orion</a></li>
+        <li><a href="#plan">Residences</a></li>
+        <li><a href="#process">Lifestyle</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#founder">About</a></li>
+        <li><a href="#capital">Investment enquiries</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
     <div class="footer-legal">
-      <b>Tshoji Capital Pty Ltd</b> ACN 692 914 015, ABN 33 692 914 015. Registered office: Brisbane City QLD 4000. This page is for information purposes only and does not constitute a product disclosure statement, prospectus, or offer of securities. All figures are preliminary, indicative, and subject to change following formal feasibility and legal review. Prospective investors should seek independent financial and legal advice.
+      <b>Tshoji Capital Pty Ltd</b> ACN 692 914 015, ABN 33 692 914 015. Registered office: Brisbane City QLD 4000. Orion is a proposed development. All imagery, plans, locations, areas, residence counts, hotel-room counts, pricing, finishes and amenities are preliminary, indicative only and subject to site acquisition, design development, consultant coordination and statutory approvals. This website does not constitute an offer of securities or financial advice.
     </div>
   </div>
 </footer>
@@ -1231,6 +1255,36 @@
       });
     });
   });
+
+  // Static-site enquiries open a prepared email so no message is silently lost.
+  var enquiryForm = document.getElementById('orion-enquiry');
+  if(enquiryForm){
+    enquiryForm.addEventListener('submit', function(event){
+      event.preventDefault();
+      if(!enquiryForm.reportValidity()) return;
+      var name = document.getElementById('name').value.trim();
+      var email = document.getElementById('email').value.trim();
+      var interest = document.getElementById('interest').value;
+      var message = document.getElementById('msg').value.trim();
+      var subject = 'Orion enquiry — ' + interest;
+      var body = 'Name: ' + name + '\nEmail: ' + email + '\nInterest: ' + interest + '\n\n' + (message || 'Please contact me with further Orion information.');
+      window.location.href = 'mailto:contact@tshojicapital.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    });
+  }
+
+  var updatesButton = document.getElementById('updates-button');
+  if(updatesButton){
+    updatesButton.addEventListener('click', function(){
+      var updatesEmail = document.getElementById('updates-email');
+      if(!updatesEmail.value || !updatesEmail.checkValidity()){
+        updatesEmail.reportValidity();
+        return;
+      }
+      var subject = 'Join the Orion update list';
+      var body = 'Please add ' + updatesEmail.value.trim() + ' to the Orion project update list.';
+      window.location.href = 'mailto:contact@tshojicapital.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    });
+  }
 })();
 </script>
 </body>
