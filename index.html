@@ -355,6 +355,33 @@
   .dev-copy{ margin-top:26px; max-width:60ch; }
   .dev-copy p{ font-size:14.5px; color: var(--cream-dim); line-height:1.75; }
 
+  /* NEXT PROJECT */
+  .next-project{ background:var(--navy-edge); color:#fff; padding:0; }
+  .next-project-grid{ display:grid; grid-template-columns:1fr; min-height:620px; }
+  @media(min-width:900px){ .next-project-grid{ grid-template-columns:minmax(0,1.25fr) minmax(420px,.75fr); } }
+  .next-project-image{ position:relative; min-height:520px; overflow:hidden; }
+  .next-project-image img{ width:100%; height:100%; object-fit:cover; display:block; transition:transform .8s cubic-bezier(.2,.8,.2,1); }
+  .next-project:hover .next-project-image img{ transform:scale(1.025); }
+  .next-project-image::after{ content:""; position:absolute; inset:0; background:linear-gradient(180deg,transparent 52%,rgba(7,15,26,.45)); pointer-events:none; }
+  .next-project-copy{ padding:clamp(54px,7vw,96px); display:flex; flex-direction:column; justify-content:center; align-items:flex-start; }
+  .next-project-kicker{ color:var(--brass-light); font-size:10px; letter-spacing:.18em; text-transform:uppercase; margin-bottom:24px; }
+  .next-project-copy h2{ color:#fff; font-family:var(--font-display); font-size:clamp(43px,5vw,72px); font-weight:400; line-height:.98; }
+  .next-project-copy h2 em{ color:var(--brass-light); font-weight:300; }
+  .next-project-copy p{ color:rgba(255,255,255,.7); font-size:15px; line-height:1.75; margin:25px 0 32px; max-width:43ch; }
+  .next-project-meta{ width:100%; display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid rgba(255,255,255,.15); border-bottom:1px solid rgba(255,255,255,.15); margin-bottom:32px; }
+  .next-project-meta div{ padding:16px 14px 15px 0; }
+  .next-project-meta div+div{ padding-left:16px; border-left:1px solid rgba(255,255,255,.15); }
+  .next-project-meta strong{ display:block; color:#fff; font-family:var(--font-display); font-size:25px; font-weight:400; }
+  .next-project-meta span{ display:block; color:rgba(255,255,255,.48); font-size:9px; letter-spacing:.1em; text-transform:uppercase; margin-top:3px; }
+  .next-project-link{ display:inline-flex; align-items:center; gap:13px; border:1px solid rgba(255,255,255,.42); color:#fff; padding:14px 19px; text-decoration:none; font-size:12px; letter-spacing:.06em; transition:.25s ease; }
+  .next-project-link:hover{ border-color:var(--brass-light); background:var(--brass-light); color:var(--navy-edge); }
+  .next-project-link::after{ content:"\2192"; font-size:16px; }
+  @media(max-width:600px){
+    .next-project-image{ min-height:440px; }
+    .next-project-copy{ padding:48px 24px 56px; }
+    .next-project-meta strong{ font-size:21px; }
+  }
+
   /* ORION EXPERIENCE */
   .orion-intro{ max-width:64ch; margin-top:-30px; color:var(--cream-dim); font-size:16px; line-height:1.75; }
   .orion-film{ margin-top:38px; }
@@ -457,6 +484,7 @@
     <div class="word"><svg class="vane" viewBox="0 0 24 24" fill="none"><path d="M12 2L12 22M12 2L8 6M12 2L16 6" stroke="#8a6d40" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="14" r="3.4" stroke="#8a6d40" stroke-width="1.2"/></svg>TSHOJI <span>CAPITAL</span></div>
     <ul class="navlinks">
       <li><a href="#developments">Orion</a></li>
+      <li><a href="the-orchid.html">The Orchid</a></li>
       <li><a href="#plan">Residences</a></li>
       <li><a href="#process">Lifestyle</a></li>
       <li><a href="#location">Location</a></li>
@@ -944,6 +972,25 @@
   </div>
 </section>
 
+<section class="next-project" aria-labelledby="orchid-home-title">
+  <div class="next-project-grid">
+    <div class="next-project-image">
+      <img src="assets/orchid/exterior-sunset.webp" alt="The Orchid, a sculptural 35-storey hotel and residential tower on the Gold Coast" loading="lazy">
+    </div>
+    <div class="next-project-copy">
+      <div class="next-project-kicker">The next Tshoji Capital address</div>
+      <h2 id="orchid-home-title">The <em>Orchid</em></h2>
+      <p>A vertical resort shaped by the elegance of its namesake. The Orchid brings together hotel suites, private sky residences and elevated coastal experiences across 35 considered levels.</p>
+      <div class="next-project-meta" aria-label="The Orchid key facts">
+        <div><strong>35</strong><span>Levels</span></div>
+        <div><strong>17</strong><span>Residential</span></div>
+        <div><strong>8</strong><span>Hotel</span></div>
+      </div>
+      <a class="next-project-link" href="the-orchid.html">Explore The Orchid</a>
+    </div>
+  </div>
+</section>
+
 <section id="developments">
   <div class="wrap">
     <div class="section-head">
@@ -1135,6 +1182,7 @@
       </div>
       <ul class="footer-nav">
         <li><a href="#developments">Orion</a></li>
+        <li><a href="the-orchid.html">The Orchid</a></li>
         <li><a href="#plan">Residences</a></li>
         <li><a href="#process">Lifestyle</a></li>
         <li><a href="#location">Location</a></li>
