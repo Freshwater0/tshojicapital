@@ -21,3 +21,14 @@ a,button{-webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-vi
 
 /* Keep media within its grid track on narrow screens. */
 img,video{max-width:100%}.plan-card,.project-image,.hotel-card,.res-card,.gallery-card{min-width:0}.plan-dropdown-content{overflow:hidden}.plan-dropdown-content img{height:auto!important;max-width:100%}
+
+/* Resilient layouts and accessible navigation. */
+html{scroll-padding-top:90px}main{display:block}section[id],article[id]{scroll-margin-top:90px}
+.skip-link{position:fixed;top:12px;left:12px;z-index:200;padding:12px 18px;background:#f8f3e8;color:#14223a;transform:translateY(-160%)}.skip-link:focus{transform:none}
+.reveal.reveal-pending:not(.in){opacity:0;transform:translateY(18px)}
+.brand{flex-shrink:0}.nav-links a{white-space:nowrap}.menu-toggle{flex-shrink:0}.contact-row>*{min-width:0}.contact-row a{overflow-wrap:anywhere}
+.res-copy{padding-bottom:54px}.plan-link{min-height:28px;display:inline-flex;align-items:center}.plan-copy,.project-copy,.residence,.tier>div{min-width:0}
+.plan-render img{height:auto}.plan-dropdown summary{gap:12px}.plan-chevron{flex-shrink:0}
+@media(max-width:1100px) and (min-width:901px){.nav-inner{gap:16px}.nav-links{gap:16px}.nav-links a{font-size:11px}}
+@media(max-width:620px){.hero{min-height:100svh}.contact-row{grid-template-columns:70px minmax(0,1fr);gap:14px}.stat{padding:24px 18px}.tier{gap:14px;padding:18px 14px;grid-template-columns:70px minmax(0,1fr)}.penthouse article{padding:30px 24px}.project-meta{grid-template-columns:repeat(3,minmax(0,1fr))}.project-meta span{letter-spacing:.02em}.project-meta div+div{padding-left:10px}.lightbox-stage img{max-height:calc(100dvh - 180px)}}
+@media(prefers-reduced-motion:reduce){.reveal.reveal-pending:not(.in){opacity:1;transform:none}}
