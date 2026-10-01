@@ -23,6 +23,7 @@
         'Email: '+fields.namedItem('email').value.trim(),
         'Phone: '+(fields.namedItem('phone').value.trim()||'Not provided'),
         'Interest: '+fields.namedItem('interest').value,
+        'Request: '+fields.namedItem('request').value,
         '',fields.namedItem('message').value.trim()
       ].join('\n');
       window.location.href='mailto:contact@tshojicapital.com?subject='+encodeURIComponent(form.dataset.project+' residence enquiry')+'&body='+encodeURIComponent(content);
