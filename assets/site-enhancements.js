@@ -9,3 +9,32 @@
   var planImages=[].slice.call(document.querySelectorAll('.plan-card:not(.plan-dropdown-card) img'));
   if(planImages.length){var box=document.createElement('div');box.className='plan-lightbox';box.setAttribute('role','dialog');box.setAttribute('aria-modal','true');box.setAttribute('aria-label','Floor plan viewer');box.setAttribute('aria-hidden','true');box.innerHTML='<div class="lightbox-top"><div><div class="lightbox-level"></div><div class="lightbox-title"></div></div><button class="lightbox-close" type="button" aria-label="Close plan">&times;</button></div><div class="lightbox-stage"><img alt=""><button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous plan">&#8249;</button><button class="lightbox-nav lightbox-next" type="button" aria-label="Next plan">&#8250;</button></div><div class="lightbox-foot">Use arrow keys to browse · Escape to close</div>';body.appendChild(box);var current=0,lastFocus=null,stageImage=box.querySelector('.lightbox-stage img'),title=box.querySelector('.lightbox-title'),level=box.querySelector('.lightbox-level');function render(i){current=(i+planImages.length)%planImages.length;var image=planImages[current],card=image.closest('.plan-card');stageImage.src=image.currentSrc||image.src;stageImage.alt=image.alt||'';title.textContent=(card&&card.querySelector('h3')||{}).textContent||image.alt||'Concept floor plan';level.textContent=(card&&card.querySelector('small')||{}).textContent||'The collection'}function open(i,trigger){if(body.classList.contains('menu-open')){body.classList.remove('menu-open');if(toggle){toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open menu')}}lastFocus=trigger;render(i);box.classList.add('is-open');box.setAttribute('aria-hidden','false');body.classList.add('lightbox-open');[].slice.call(body.children).forEach(function(el){if(el!==box&&!el.inert){el.inert=true;el.dataset.lightboxInert='true'}});box.querySelector('.lightbox-close').focus()}function close(){box.classList.remove('is-open');box.setAttribute('aria-hidden','true');body.classList.remove('lightbox-open');body.querySelectorAll('[data-lightbox-inert]').forEach(function(el){el.inert=false;delete el.dataset.lightboxInert});if(lastFocus)lastFocus.focus()}planImages.forEach(function(image,i){var anchor=image.closest('.plan-image');if(anchor){anchor.addEventListener('click',function(e){e.preventDefault();open(i,anchor)})}else{var button=document.createElement('button');button.type='button';button.className='plan-zoom';button.setAttribute('aria-label','Expand '+(image.alt||'floor plan'));image.parentNode.insertBefore(button,image);button.appendChild(image);button.addEventListener('click',function(){open(i,button)})}});document.querySelectorAll('[data-plan-target]').forEach(function(link){link.addEventListener('click',function(e){var i=planImages.findIndex(function(img){return img.closest('.plan-card').id===link.dataset.planTarget});if(i!==-1){e.preventDefault();open(i,link)}})});box.querySelector('.lightbox-close').addEventListener('click',close);box.querySelector('.lightbox-prev').addEventListener('click',function(){render(current-1)});box.querySelector('.lightbox-next').addEventListener('click',function(){render(current+1)});box.addEventListener('click',function(e){if(e.target===box||e.target.classList.contains('lightbox-stage'))close()});document.addEventListener('keydown',function(e){if(!box.classList.contains('is-open'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft'){e.preventDefault();render(current-1)}if(e.key==='ArrowRight'){e.preventDefault();render(current+1)}if(e.key==='Tab'){var buttons=[].slice.call(box.querySelectorAll('button')),first=buttons[0],last=buttons[buttons.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}})}
 })();
+
+(function(){
+  'use strict';
+  document.querySelectorAll('.buyer-enquiry').forEach(function(form){
+    form.addEventListener('submit',function(event){
+      event.preventDefault();
+      if(!form.reportValidity())return;
+      var fields=form.elements;
+      var content=[
+        'Residence enquiry: '+form.dataset.project,
+        'Name: '+fields.namedItem('name').value.trim(),
+        'Email: '+fields.namedItem('email').value.trim(),
+        'Phone: '+(fields.namedItem('phone').value.trim()||'Not provided'),
+        'Interest: '+fields.namedItem('interest').value,
+        '',fields.namedItem('message').value.trim()
+      ].join('\n');
+      window.location.href='mailto:contact@tshojicapital.com?subject='+encodeURIComponent(form.dataset.project+' residence enquiry')+'&body='+encodeURIComponent(content);
+      form.querySelector('.enquiry-status').textContent='Your email draft is ready. Please send it from your email app to complete your enquiry. If the app did not open, use the email link below.';
+    });
+  });
+  document.querySelectorAll('[data-enquiry-interest]').forEach(function(link){
+    link.addEventListener('click',function(){
+      var select=document.querySelector('.buyer-enquiry select');
+      if(!select)return;
+      var option=[].slice.call(select.options).find(function(item){return item.textContent.indexOf(link.dataset.enquiryInterest)===0});
+      if(option)select.value=option.value;
+    });
+  });
+})();
