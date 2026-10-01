@@ -1,4 +1,5 @@
 /* Shared experience layer — Tshoji Capital */
+.hero-year{font:400 clamp(26px,4vw,42px)/1 var(--display);color:#e1c08e;letter-spacing:.08em;margin:0 0 18px}.image-year{position:absolute;z-index:1;bottom:28px;left:28px;color:#fff;font:400 13px var(--body);letter-spacing:.12em;text-transform:uppercase}.image-year span{display:block;font:400 32px/1.2 var(--display);letter-spacing:.03em;margin-top:6px}.project-year{position:absolute;z-index:1;top:24px;right:24px;padding:12px 17px;border:1px solid rgba(255,255,255,.4);background:rgba(7,20,33,.7);color:#fff;font:400 30px/1 var(--display);letter-spacing:.04em;backdrop-filter:blur(8px)}@media(max-width:620px){.project-year{top:18px;right:18px;font-size:25px}.image-year{bottom:18px;left:18px}}
 ::selection{background:#cfaa73;color:#071421}
 body{overflow-x:hidden}body.menu-open,body.lightbox-open{overflow:hidden}
 a,button{-webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible{outline:2px solid #cfaa73;outline-offset:4px}
