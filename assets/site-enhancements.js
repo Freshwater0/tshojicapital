@@ -17,14 +17,20 @@
       event.preventDefault();
       if(!form.reportValidity())return;
       var fields=form.elements;
+      function field(name,fallback){var item=fields.namedItem(name);return item&&item.value?item.value.trim():fallback}
       var content=[
         'Residence enquiry: '+form.dataset.project,
-        'Name: '+fields.namedItem('name').value.trim(),
-        'Email: '+fields.namedItem('email').value.trim(),
-        'Phone: '+(fields.namedItem('phone').value.trim()||'Not provided'),
-        'Interest: '+fields.namedItem('interest').value,
-        'Request: '+fields.namedItem('request').value,
-        '',fields.namedItem('message').value.trim()
+        'Name: '+field('name','Not provided'),
+        'Email: '+field('email','Not provided'),
+        'Phone: '+field('phone','Not provided'),
+        'Buyer type: '+field('buyer_type','Not provided'),
+        'Interest: '+field('interest','Not provided'),
+        'Indicative budget: '+field('budget','Not provided'),
+        'Current deposit position: '+field('deposit','Not provided'),
+        'Potential monthly contribution: '+field('monthly','Not provided'),
+        'Preferred timing: '+field('timing','Not provided'),
+        'Request: '+field('request','Not provided'),
+        '',field('message','')
       ].join('\n');
       window.location.href='mailto:contact@tshojicapital.com?subject='+encodeURIComponent(form.dataset.project+' residence enquiry')+'&body='+encodeURIComponent(content);
       form.querySelector('.enquiry-status').textContent='Your email draft is ready. Please send it from your email app to complete your enquiry. If the app did not open, use the email link below.';
@@ -32,7 +38,7 @@
   });
   document.querySelectorAll('[data-enquiry-interest]').forEach(function(link){
     link.addEventListener('click',function(){
-      var select=document.querySelector('.buyer-enquiry select');
+      var select=document.querySelector('.buyer-enquiry select[name="interest"]');
       if(!select)return;
       var option=[].slice.call(select.options).find(function(item){return item.textContent.indexOf(link.dataset.enquiryInterest)===0});
       if(option)select.value=option.value;
